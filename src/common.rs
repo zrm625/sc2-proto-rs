@@ -6,7 +6,7 @@
 #![allow(clippy::all)]
 
 #![allow(unused_attributes)]
-#![rustfmt::skip]
+// #![rustfmt::skip]
 
 #![allow(box_pointers)]
 #![allow(dead_code)]

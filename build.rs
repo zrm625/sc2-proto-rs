@@ -21,8 +21,10 @@ fn proto_modules(proto_dir: &Path) -> Vec<String> {
 
 #[cfg(feature = "protoc-rust")]
 fn main() {
+    println!("Starting build!");
+
     let in_dir = "./s2client-proto/s2clientprotocol";
-    let out_dir = &env::var("OUT_DIR").unwrap();
+    let out_dir = &env::var("OUT_DIR").unwrap_or("./src".into());
 
     // Read list of all input protobuf files
     let input_mods = proto_modules(Path::new(in_dir));
