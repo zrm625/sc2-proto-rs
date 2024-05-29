@@ -14,7 +14,8 @@ build = "build.rs"
 protoc-rust = { version = "2.28.0", optional = true }
 
 [dependencies]
+# Don't use 3.X.X until protoc-rust is stable
 protobuf = "2.28.0"
 
 [features]
-default= ["protoc-rust"]
+default = ["protoc-rust"]
